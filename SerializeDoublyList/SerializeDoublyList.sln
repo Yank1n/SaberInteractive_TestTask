@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SerializeDoublyList", "SerializeDoublyList\SerializeDoublyList.vcxproj", "{446A9DB3-92CB-4F54-9B8A-50D8F66BCF23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{446A9DB3-92CB-4F54-9B8A-50D8F66BCF23}.Debug|x64.ActiveCfg = Debug|x64
+		{446A9DB3-92CB-4F54-9B8A-50D8F66BCF23}.Debug|x64.Build.0 = Debug|x64
+		{446A9DB3-92CB-4F54-9B8A-50D8F66BCF23}.Release|x64.ActiveCfg = Release|x64
+		{446A9DB3-92CB-4F54-9B8A-50D8F66BCF23}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF2497B0-9D4A-4B52-BCBE-CB4EA0FA97AA}
+	EndGlobalSection
+EndGlobal

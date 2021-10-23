@@ -1,0 +1,44 @@
+//
+// Calculate smooth (average) per-vertex normals
+//
+// [out] normals - output per-vertex normals
+// [in] verts - input per-vertex positions
+// [in] faces - triangles (triplets of vertex indices)
+// [in] nverts - total number of vertices (# of elements in verts and normals arrays)
+// [in] nfaces - total number of faces (# of elements in faces array)
+//
+
+#include <Windows.h>
+
+struct vec3
+{
+    void Normalize() const;
+
+    friend vec3 operator-(const vec3& rhs, const vec3& lhs);
+};
+
+vec3 Cross(vec3& rhs, vec3& lhs);
+
+void calc_mesh_normals(vec3* normals, const vec3* verts, const int* faces, int nverts, int nfaces)
+{
+    vec3 AB, BC;
+    const vec3* A, * B, * C;
+
+    const int* currentFace = 0;
+    for (int faceIndex{}; faceIndex < nfaces; ++faceIndex)
+    {
+	currentFace = faces + faceIndex * 3;
+        for (int vertIndex{}; vertIndex < nverts; ++vertIndex)
+        {
+            A = &verts[vertIndex * currentFace[0]];
+            B = &verts[vertIndex * currentFace[1]];
+            C = &verts[vertIndex * currentFace[2]];
+
+            AB = *B - *A;
+            BC = *C - *B;
+
+            normals[faceIndex] = Cross(AB, BC);
+            normals[faceIndex].Normalize();
+        }
+    }
+}
